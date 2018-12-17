@@ -1,6 +1,14 @@
 # AngularFirebaseAuthService
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+Builds a user authentication app using Angular 7 and google Firebase.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6 and [Firebase](https://firebase.google.com/) version 5.7.0.
+
+## Notes
+
+Update to use just the Firebase module required.
+
+Link to Youtube tutorial by 'Demos with Angular': [Building A User Authentication Service with Angular and Firebase](https://www.youtube.com/watch?v=mfONkAj4x94)
 
 ## Development server
 
