@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
+
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [
@@ -12,12 +14,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp({
-        apiKey: "AIzaSyCUD6Ekbr4Fb0cxXwnCG-HRzSKljKm1WIg",
-        authDomain: "user-service-example-10459.firebaseapp.com",
-        databaseURL: "https://user-service-example-10459.firebaseio.com",
-        projectId: "user-service-example-10459",
-        storageBucket: "user-service-example-10459.appspot.com",
-        messagingSenderId: "942414466681"
+        apiKey: environment.API_KEY,
+        authDomain: environment.AUTH_DOMAIN,
+        databaseURL: environment.DATABASE_URL,
+        projectId: environment.PROJECT_ID,
+        storageBucket: environment.STORAGE_BUCKET,
+        messagingSenderId: environment.MESSAGING_SENDER_ID
     }),
     AngularFireAuthModule,
     AngularFireDatabaseModule

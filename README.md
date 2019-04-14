@@ -1,35 +1,106 @@
-# AngularFirebaseAuthService
+# Angular Firebase Auth Service
 
 Builds a user authentication app using Angular 7 and google Firebase.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6 and [Firebase](https://firebase.google.com/) version 5.7.0.
+*** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Notes
+## Table of contents
 
-Update to use just the Firebase module required.
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
-Link to Youtube tutorial by 'Demos with Angular': [Building A User Authentication Service with Angular and Firebase](https://www.youtube.com/watch?v=mfONkAj4x94)
+## General info
 
-## Development server
+* Firebase Real-time database used, rules set to test:
+
+```json
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+
+
+```
+
+## Screenshots
+
+![Example screenshot](./img/user-logged-in.png).
+
+## Technologies
+
+* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+
+* [Firebase v5.7.0](https://firebase.google.com/)
+
+* [Reactive Extensions for Javascript -RxJS v6.3.3](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
+
+## Setup
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Code Examples
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* _user.service_ file
 
-## Build
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  uid = this.afAuth.authState.pipe(
+    map(authState => {
+      if (!authState) {
+        return null;
+      } else {
+        return authState.uid;
+      }
+    })
+  );
+  //test to see if already logged in
+  isAdmin: Observable<boolean> = this.uid.pipe(
+    switchMap(uid => {
+      if (!uid) {
+        return observableOf(false);
+      } else {
+        return this.db.object<boolean>('/admin/' +uid).valueChanges();
+      }
+    })
+  );
+  //test to see if user has specific permissions
+  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) { }
+  login() {
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  }
+  logout() {
+    this.afAuth.auth.signOut();
+  }
+}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Features
 
-## Running unit tests
+* user login using google id or password, can be viewed on Firebase Console.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* User privileges can be revoked from the Firebase console.
 
-## Running end-to-end tests
+## Status & To-Do List
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Status: Working app with a successful login storing login details in the firebase database.
 
-## Further help
+* To-Do: add theme colors and functionality. A bootstrap button would be better.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Inspiration
+
+* [Demos With Angular: Building A User Authentication Service with Angular and Firebase](https://www.youtube.com/watch?v=mfONkAj4x94).
+
+## Contact
+
+Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
