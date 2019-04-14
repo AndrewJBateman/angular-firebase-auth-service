@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  API_KEY: 'AIzaSyBuRMSKi2kPkUabbRDddy4pSsPyN-Xv2ec',
-  AUTH_DOMAIN: 'user-login-service.firebaseapp.com',
-  DATABASE_URL: 'https://user-login-service.firebaseio.com',
-  PROJECT_ID: 'user-login-service',
-  STORAGE_BUCKET: 'user-login-service.appspot.com',
-  MESSAGING_SENDER_ID: '370195555634',
+  API_KEY: 'test',
+  AUTH_DOMAIN: 'test',
+  DATABASE_URL: 'test',
+  PROJECT_ID: 'test',
+  STORAGE_BUCKET: 'test',
+  MESSAGING_SENDER_ID: 'test',
 };
 
 /*
