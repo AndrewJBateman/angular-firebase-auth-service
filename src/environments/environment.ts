@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  API_KEY: 'AIzaSyCUD6Ekbr4Fb0cxXwnCG-HRzSKljKm1WIg',
-  AUTH_DOMAIN: 'user-service-example-10459.firebaseapp.com',
-  DATABASE_URL: 'https://user-service-example-10459.firebaseio.com',
-  PROJECT_ID: 'user-service-example-10459',
-  STORAGE_BUCKET: 'user-service-example-10459.appspot.com',
-  MESSAGING_SENDER_ID: '942414466681',
+  API_KEY: 'AIzaSyBuRMSKi2kPkUabbRDddy4pSsPyN-Xv2ec',
+  AUTH_DOMAIN: 'user-login-service.firebaseapp.com',
+  DATABASE_URL: 'https://user-login-service.firebaseio.com',
+  PROJECT_ID: 'user-login-service',
+  STORAGE_BUCKET: 'user-login-service.appspot.com',
+  MESSAGING_SENDER_ID: '370195555634',
 };
 
 /*
