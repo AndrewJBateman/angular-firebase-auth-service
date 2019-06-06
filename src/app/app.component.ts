@@ -9,6 +9,5 @@ import { UserService } from './user.service';
 export class AppComponent {
   title = 'angular-firebase-auth-service';
   constructor(public user: UserService) {
-    
   }
 }

@@ -1,6 +1,6 @@
 # Angular Firebase Auth Service
 
-Builds a user authentication app using Angular 7 and google Firebase.
+Builds a user authentication app using Angular 8 and google Firebase.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -30,21 +30,27 @@ Builds a user authentication app using Angular 7 and google Firebase.
 
 ```
 
+* this is just for development, not production, so the whole firebase module is used. This error is shown in the dev tools console: _When deploying Firebase apps to production, it is advisable to only import the individual SDK components you intend to use._
+
 ## Screenshots
 
 ![Example screenshot](./img/user-logged-in.png).
 
 ## Technologies
 
-* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+* [Angular v8.0.0](https://angular.io/)
 
-* [Firebase v5.7.0](https://firebase.google.com/)
+* [Angular CLI v8.0.1](https://cli.angular.io/).
 
-* [Reactive Extensions for Javascript -RxJS v6.3.3](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
+* [Firebase v6.1.0](https://firebase.google.com/)
+
+* [Reactive Extensions for Javascript -RxJS v6.5.2](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 
 ## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* create google firebase project and paste access keys into app.module.ts.
+
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code Examples
 
@@ -103,4 +109,4 @@ export class UserService {
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
