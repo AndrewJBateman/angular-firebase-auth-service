@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 
@@ -12,8 +13,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp({
-    }),
+    AngularFireModule.initializeApp(
+      environment.firebaseConfig
+    ),
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],

@@ -1,6 +1,6 @@
 # Angular Firebase Auth Service
 
-Builds a user authentication app using Angular 8 and google Firebase.
+Builds a user authentication app using Angular 9 and google Firebase.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -30,7 +30,7 @@ Builds a user authentication app using Angular 8 and google Firebase.
 
 ```
 
-* this is just for development, not production, so the whole firebase module is used. This error is shown in the dev tools console: _When deploying Firebase apps to production, it is advisable to only import the individual SDK components you intend to use._
+* This is just for development, not production, so the whole firebase module is used. This error is shown in the dev tools console: _When deploying Firebase apps to production, it is advisable to only import the individual SDK components you intend to use._
 
 ## Screenshots
 
@@ -38,19 +38,15 @@ Builds a user authentication app using Angular 8 and google Firebase.
 
 ## Technologies
 
-* [Angular v8.0.0](https://angular.io/)
-
-* [Angular CLI v8.0.1](https://cli.angular.io/).
-
-* [Firebase v6.1.0](https://firebase.google.com/)
-
-* [Reactive Extensions for Javascript -RxJS v6.5.2](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
+* [Angular v9.1.0](https://angular.io/)
+* [Firebase v7.9.2](https://firebase.google.com/)
+* [Reactive Extensions for Javascript -RxJS v6.5.4](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 
 ## Setup
 
-* create google firebase project and paste access keys into app.module.ts.
-
-* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Install dependencies with `npm i`
+* Create google firebase project and paste access keys into app.module.ts
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 
 ## Code Examples
 
@@ -94,13 +90,12 @@ export class UserService {
 ## Features
 
 * user login using google id or password, can be viewed on Firebase Console.
-
 * User privileges can be revoked from the Firebase console.
+* Updated to latest Angular v9 and all dependencies are the latest versions with no conflicts.
 
 ## Status & To-Do List
 
-* Status: Working app with a successful login storing login details in the firebase database.
-
+* Status: Updated and working app with a successful login storing login details in the firebase database.
 * To-Do: add theme colors and functionality. A bootstrap button would be better.
 
 ## Inspiration
