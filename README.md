@@ -6,14 +6,17 @@ Builds a user authentication app using Angular 9 and google Firebase.
 
 ## Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [Angular Firebase Auth Service](#angular-firebase-auth-service)
+  * [Table of contents](#table-of-contents)
+  * [General info](#general-info)
+  * [Screenshots](#screenshots)
+  * [Technologies](#technologies)
+  * [Setup](#setup)
+  * [Code Examples](#code-examples)
+  * [Features](#features)
+  * [Status & To-Do List](#status--to-do-list)
+  * [Inspiration](#inspiration)
+  * [Contact](#contact)
 
 ## General info
 
@@ -44,6 +47,7 @@ Builds a user authentication app using Angular 9 and google Firebase.
 
 ## Setup
 
+* npm i --save-dev @angular-devkit/build-angular
 * Install dependencies with `npm i`
 * Create google firebase project and paste access keys into app.module.ts
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
