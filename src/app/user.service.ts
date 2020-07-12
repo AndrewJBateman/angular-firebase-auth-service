@@ -6,11 +6,11 @@ import { auth } from 'firebase';
 import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   uid = this.afAuth.authState.pipe(
-    map(authState => {
+    map((authState) => {
       if (!authState) {
         return null;
       } else {
@@ -20,7 +20,7 @@ export class UserService {
   );
   // test to see if already logged in
   isAdmin: Observable<boolean> = this.uid.pipe(
-    switchMap(uid => {
+    switchMap((uid) => {
       if (!uid) {
         return observableOf(false);
       } else {
@@ -29,11 +29,11 @@ export class UserService {
     })
   );
   // test to see if user has specific permissions
-  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) { }
+  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) {}
   login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }
   logout() {
-    this.afAuth.auth.signOut();
+    this.afAuth.signOut();
   }
 }
