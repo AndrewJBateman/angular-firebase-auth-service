@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, of as observableOf } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { map, switchMap } from 'rxjs/operators';
-import { auth } from 'firebase';
+import { map, switchMap, tap } from 'rxjs/operators';
+import firebase from 'firebase/app';
 import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  uid = this.afAuth.authState.pipe(
+  uid = this.auth.authState.pipe(
     map((authState) => {
       if (!authState) {
         return null;
@@ -18,8 +18,10 @@ export class UserService {
       }
     })
   );
+
   // test to see if already logged in
-  isAdmin: Observable<boolean> = this.uid.pipe(
+  isLoggedIn: Observable<boolean> = this.uid.pipe(
+    tap((uid) => console.log('this.uid is of type:', typeof(this.uid))),
     switchMap((uid) => {
       if (!uid) {
         return observableOf(false);
@@ -29,11 +31,11 @@ export class UserService {
     })
   );
   // test to see if user has specific permissions
-  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase) {}
+  constructor(private auth: AngularFireAuth, private db: AngularFireDatabase) {}
   login() {
-    this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
   logout() {
-    this.afAuth.signOut();
+    this.auth.signOut();
   }
 }

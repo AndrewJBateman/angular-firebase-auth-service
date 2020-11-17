@@ -1,6 +1,6 @@
 # :zap: Angular Firebase Auth Service
 
-Builds a user authentication app using Angular 10 and google Firebase.
+Builds a user authentication app using Angular 11 and google Firebase.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -41,9 +41,10 @@ Builds a user authentication app using Angular 10 and google Firebase.
 
 ## :signal_strength: Technologies
 
-* [Angular v10](https://angular.io/)
-* [Firebase v7](https://firebase.google.com/)
+* [Angular v11](https://angular.io/)
+* [Firebase v8](https://firebase.google.com/)
 * [Reactive Extensions for Javascript -RxJS v6](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
+* [RxJS SwitchMap](https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap) On each emission **the previous inner observable is cancelled and the new observable is subscribed**; switch to a new observable. Only one subscription at a time - seems ideal for login applications
 
 ## :floppy_disk: Setup
 

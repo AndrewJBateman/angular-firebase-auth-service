@@ -1,5 +1,5 @@
 <div *ngIf="user.uid | async as uid; else login">
-  The user is logged in. {{ uid }}
+  The user is logged in with user id: {{ uid }}
   <div *ngIf="user.isAdmin | async">The user also has ADMIN superpowers.</div>
   <div><button (click)="user.logout()">Logout</button></div>
 </div>
