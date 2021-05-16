@@ -1,8 +1,12 @@
 # :zap: Angular Firebase Auth Service
 
 Builds a user authentication app using Angular 11 and google Firebase.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-firebase-auth-service?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-firebase-auth-service?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-firebase-auth-service?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-firebase-auth-service?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -49,7 +53,7 @@ Builds a user authentication app using Angular 11 and google Firebase.
 ## :floppy_disk: Setup
 
 * Install dependencies with `npm i`
-* Create google firebase project and paste access keys into app.module.ts
+* Create google firebase project with `Sign-in provider` as Google and paste access keys from `Project Settings` into `environment.ts`
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files
 
 ## :computer: Code Examples
@@ -95,17 +99,21 @@ export class UserService {
 
 * user login using google id or password, can be viewed on Firebase Console.
 * User privileges can be revoked from the Firebase console.
-* Updated to latest Angular v10 and all dependencies are the latest versions with no conflicts.
+* Updated may 2021.
 
 ## :clipboard: Status & To-Do List
 
-* Status: Updated and working app with a successful login storing login details in the firebase database.
+* Status: Working
 * To-Do: add theme colors and functionality. A bootstrap button would be better.
 
 ## :clap: Inspiration
 
 * [Demos With Angular: Building A User Authentication Service with Angular and Firebase](https://www.youtube.com/watch?v=mfONkAj4x94).
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
