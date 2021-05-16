@@ -1,6 +1,6 @@
 # :zap: Angular Firebase Auth Service
 
-Builds a user authentication app using Angular 11 and google Firebase.
+* Builds a user authentication app using Angular and google Firebase.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-firebase-auth-service?style=plastic)
@@ -24,18 +24,7 @@ Builds a user authentication app using Angular 11 and google Firebase.
 
 ## :books: General info
 
-* Firebase Real-time database used, rules set to test:
-
-```html
-<div *ngIf="user.uid | async as uid; else login">
-  The user is logged in with user id: {{ uid }}
-  <div *ngIf="user.isAdmin | async">The user also has ADMIN superpowers.</div>
-  <div><button (click)="user.logout()">Logout</button></div>
-</div>
-<ng-template #login> You need to login: <button (click)="user.login()">Login</button> </ng-template>
-```
-
-* This is just for development, not production, so the whole firebase module is used. This error is shown in the dev tools console: _When deploying Firebase apps to production, it is advisable to only import the individual SDK components you intend to use._
+* This is just for development, not production, so the whole firebase module is used.
 
 ## :camera: Screenshots
 
