@@ -26,15 +26,13 @@ Builds a user authentication app using Angular 11 and google Firebase.
 
 * Firebase Real-time database used, rules set to test:
 
-```json
-{
-  "rules": {
-    ".read": true,
-    ".write": true
-  }
-}
-
-
+```html
+<div *ngIf="user.uid | async as uid; else login">
+  The user is logged in with user id: {{ uid }}
+  <div *ngIf="user.isAdmin | async">The user also has ADMIN superpowers.</div>
+  <div><button (click)="user.logout()">Logout</button></div>
+</div>
+<ng-template #login> You need to login: <button (click)="user.login()">Login</button> </ng-template>
 ```
 
 * This is just for development, not production, so the whole firebase module is used. This error is shown in the dev tools console: _When deploying Firebase apps to production, it is advisable to only import the individual SDK components you intend to use._
@@ -45,7 +43,7 @@ Builds a user authentication app using Angular 11 and google Firebase.
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
+* [Angular v12](https://angular.io/)
 * [Firebase v8](https://firebase.google.com/)
 * [Reactive Extensions for Javascript -RxJS v6](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 * [RxJS SwitchMap](https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap) On each emission **the previous inner observable is cancelled and the new observable is subscribed**; switch to a new observable. Only one subscription at a time - seems ideal for login applications
