@@ -45,7 +45,7 @@
     "karma-jasmine-html-reporter": "^1.6.0",
     "node-gyp": "^8.0.0",
     "protractor": "~7.0.0",
-    "tar": "^6.1.0",
+    "tar": "^6.1.2",
     "ts-node": "~9.1.1",
     "tslint": "~6.1.2",
     "typescript": "4.2.4"
