@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of as observableOf } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { map, switchMap, tap } from 'rxjs/operators';
-import firebase from 'firebase/app';
-import { AngularFireDatabase } from '@angular/fire/database';
+import firebase from 'firebase/compat/app';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +21,7 @@ export class UserService {
 
   // test to see if already logged in
   isLoggedIn: Observable<boolean> = this.uid.pipe(
-    tap((uid) => console.log('this.uid is of type:', typeof(this.uid))),
+    tap((uid) => console.log('this.uid is of type:', typeof this.uid)),
     switchMap((uid) => {
       if (!uid) {
         return observableOf(false);
