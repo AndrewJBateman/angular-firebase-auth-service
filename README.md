@@ -1,6 +1,6 @@
 # :zap: Angular Firebase Auth Service
 
-* Builds a user authentication app using Angular and google Firebase.
+* User authentication app using Angular and google Firebase.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-firebase-auth-service?style=plastic)
@@ -20,6 +20,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -32,7 +33,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [Firebase v9](https://firebase.google.com/)
 * [Reactive Extensions for Javascript -RxJS v7](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 * [RxJS SwitchMap](https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap) On each emission **the previous inner observable is cancelled and the new observable is subscribed**; switch to a new observable. Only one subscription at a time - seems ideal for login applications
