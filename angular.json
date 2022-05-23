@@ -118,7 +118,6 @@
       }
     }
   },
-  "defaultProject": "angular-firebase-auth-service",
   "cli": {
     "analytics": false
   }
