@@ -33,7 +33,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
+* [Angular v15](https://angular.io/)
 * [Firebase v9](https://firebase.google.com/)
 * [Reactive Extensions for Javascript -RxJS v7](https://angular.io/guide/rx-library) library used for reactive programming using the observable type.
 * [RxJS SwitchMap](https://www.learnrxjs.io/learn-rxjs/operators/transformation/switchmap) On each emission **the previous inner observable is cancelled and the new observable is subscribed**; switch to a new observable. Only one subscription at a time - seems ideal for login applications
